@@ -95,5 +95,25 @@ WantedBy=multi-user.target
 
 ![image](https://user-images.githubusercontent.com/98194516/206572993-b07a495a-6a1f-4005-a18b-c0f3bad55cbe.png)
 
+## Part 6:
+
+### Make timer file
+```
+[Unit]
+Description=timer
+
+[Timer]
+Unit=testScript.service
+OnCalendar=*-*-* 0/8:00:00
+
+[Install]
+WantedBy=timers.target
+```
+
+### Move timer file to /etc/systemd/system
+
+![image](https://user-images.githubusercontent.com/98194516/206574400-3b75952d-b223-4fac-a9af-a5f56a81a494.png)
+
+
 
 
