@@ -67,6 +67,42 @@
 
 ### Script
 
+```
+#!/bin/bash
+
+  parse(){
+    grep -oE '^[^:]+' /etc/passwd
+  }
+
+  user(){
+    whoami
+  }
+
+while getopts ":w:who:" o; do
+    case "${o}" in
+        w)
+            echo "Regular users on the system are:"
+            usernames="$(parse)"
+            echo $usernames
+
+            echo "Users currently logged in are"
+            user="$(user)"
+            echo $user
+            ;;
+        who)
+            echo "Regular users on the system are:"
+            usernames="$(parse)"
+            echo $usernames
+
+            echo "Users currently logged in are"
+            user="$(user)"
+            echo $user
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+```
+
 ![image](https://user-images.githubusercontent.com/98194516/206570912-856e35c6-0cee-4b92-a78a-51b0dacf3a84.png)
 
 ### Output
