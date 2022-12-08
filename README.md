@@ -57,7 +57,43 @@
 
 ### Finished cmd
 
-![image](https://user-images.githubusercontent.com/98194516/206563973-d2637d9a-4f8f-4d3e-9020-808a19051281.png)
+![image](https://user-images.githubusercontent.com/98194516/206565327-ada0c5cd-386c-4282-be6f-6579af5c103a.png)
+
+## Part 4
+
+### Create user
+
+![image](https://user-images.githubusercontent.com/98194516/206566048-34118cf1-e7a8-4812-9caf-dbc7577a0669.png)
+
+### Script
+
+![image](https://user-images.githubusercontent.com/98194516/206570912-856e35c6-0cee-4b92-a78a-51b0dacf3a84.png)
+
+### Output
+
+![image](https://user-images.githubusercontent.com/98194516/206568648-b4e3df22-31b6-4a61-bd03-2668f7a3aa8a.png)
+
+## Part 5:
+
+### Make service file 
+
+```[Unit]
+Description=using test script that prints "hi Bob" to file.txt in home dir
+
+[Service]
+ExecStart=/home/vagrant/bin/testScript
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Move service file to /lib/systemd/system
+
+![image](https://user-images.githubusercontent.com/98194516/206572797-68af4b31-3b05-4c2f-929e-b3ace8cfb6fc.png)
+
+### enable + start service
+
+![image](https://user-images.githubusercontent.com/98194516/206572993-b07a495a-6a1f-4005-a18b-c0f3bad55cbe.png)
 
 
 
